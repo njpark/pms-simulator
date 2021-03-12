@@ -46,8 +46,7 @@ function createSubscription(data, client, remoteAddress) {
   if (!url.origin || url.origin === 'null') {
     subscription.host = DEFAULT_PCN_HOST;
   } else {
-    let str = url.origin;
-    subscription.host = str.substring(0, str.indexOf('//')+2) + remoteAddress + str.substring(str.lastIndexOf(':'));
+    subscription.host = url.origin;
     logger.debug(subscription.host);
   }
 
@@ -93,8 +92,7 @@ function updateSubscription(subscriptionId, data, client, remoteAddress) {
   if (!url.origin || url.origin === 'null') {
     subscription.host = DEFAULT_PCN_HOST;
   } else {
-    let str = url.origin;
-    subscription.host = str.substring(0, str.indexOf('//')+2) + remoteAddress + str.substring(str.lastIndexOf(':'));
+    subscription.host = url.origin;
     logger.debug(subscription.host);
   }
 
